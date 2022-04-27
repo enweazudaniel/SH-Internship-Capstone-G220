@@ -34,7 +34,7 @@ h6 {
 }
 
 h1 {
-  font-size: 1.7rem;
+  font-size: 2.7rem;
 }
 
 h2 {
@@ -46,6 +46,7 @@ h3 {
 }
 
 p {
+  color: rgba(255, 255, 255, 0.8);
   font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.7;
@@ -53,13 +54,17 @@ p {
 }
 
 .lg-p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 a {
-  color: var(--neutral-color-white);
+  color: rgba(255, 255, 255, 0.7);
   font-family: var(--font-heading);
   text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+  text-decoration: underline;
 }
 
 header {
@@ -76,13 +81,11 @@ header {
 
 .nav-bar ul li {
   display: inline-block;
-  margin-left: 1rem;
-  margin: 0 20px 0 0px;
+  margin-left: 2.75rem;
 }
 
 a:hover {
   color: var(--neutral-color-white);
-  text-decoration: underline;
   transition: 600ms;
 }
 
@@ -95,6 +98,7 @@ section {
   width: 100%;
   max-width: 600px;
   height: auto;
+  margin-top: -10%;
 }
 
 .intro {
@@ -123,7 +127,7 @@ button {
   border: none;
   font-family: var(--font-heading);
   color: var(--neutral-color-white);
-  height: 3rem;
+  height: 3.3rem;
   font-weight: 700;
   padding: 0 12px;
 }
@@ -143,7 +147,7 @@ input {
 
 button:hover {
   cursor: pointer;
-  background: #66F5EC;
+  background: hsl(176, 58%, 68%);
 }
 
 .features {
@@ -172,6 +176,7 @@ button:hover {
   font-family: var(--font-body);
   border-bottom: 1px solid var(--accent-color-cyan);
   color: var(--accent-color-cyan);
+  text-decoration-line: none;
 }
 
 .content-link:hover {
@@ -188,15 +193,17 @@ button:hover {
 
 .bg-quotes {
   margin-left: 3.5rem;
+  margin-top: 5%;
 }
 
 .testimonial-item {
-  margin-left: 56px;
+  margin-left: 3.5rem;
+  margin-top: -3.8%;
   flex-basis: 33.33%;
   border-radius: 5px;
   background-color: var(--primary-color-dark-blue-4);
   box-shadow: 2px 2px 20px 2px var(--primary-color-dark-blue-3);
-  padding: var(--padding-sm);
+  padding: 25px 20px 10px 30px;
 }
 
 .testimonial-item:first-child {
@@ -210,8 +217,18 @@ button:hover {
 
 .testimonial-item-reviewer img {
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
+}
+
+.testimonial-item-reviewer-text h4 {
+  margin-top: -1%;
+  font-size: 0.8rem;
+}
+
+.testimonial-item-reviewer-text p {
+  font-size: 0.68rem;
+  margin-top: -20%;
 }
 
 .cta {
@@ -227,10 +244,10 @@ button:hover {
   max-width: 800px;
   width: 66.66%;
   min-width: 300px;
-  padding: var(--padding-md);
+  padding: 20px 30px 40px 30px;
   box-shadow: 2px 2px 30px 2px var(--primary-color-dark-blue-3);
   background-color: var(--primary-color-dark-blue-4);
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -240,14 +257,18 @@ button:hover {
 }
 
 .input-block {
-  width: 80%;
+  width: 70%;
   max-width: 600px;
 }
 
 .btn-block {
-  width: 20%;
+  width: 28%;
   max-width: 250px;
   margin-left: 1rem;
+}
+
+#location-icon {
+  margin-top: 8%;
 }
 
 .contact-info {
@@ -285,7 +306,7 @@ footer p {
 .img-footer {
   margin-top: 12%;
   margin-right: 1rem;
-  width: 18px;
+  width: 20px;
   height: 18px;
   line-height: 1.5;
 }
@@ -298,7 +319,7 @@ footer p {
 }
 
 .contact-info-contacts-item:first-child {
-  margin-bottom: 2rem;
+  margin-bottom: -1rem;
 }
 
 .contact-info-links {
@@ -306,6 +327,10 @@ footer p {
   display: flex;
   justify-content: center;
   list-style-type: none;
+}
+
+.contact-info-links-list:hover {
+  text-decoration: none;
 }
 
 .contact-info-links-list:first-child {
@@ -329,6 +354,10 @@ footer p {
   width: 30px;
   border: 1px solid var(--neutral-color-white);
   border-radius: 50%;
+}
+
+.contact-info-social-link-item:hover {
+  color: var(--accent-color-cyan);
 }
 
 .flex-center {
@@ -355,12 +384,27 @@ footer i {}
 @media (max-width: 1000px) {
   header {
     padding: var(--padding-sm);
+    height: 10px;
+  }
+
+  header .logo-container {
+    margin-top: -3%;
+    margin-left: -4%;
+  }
+
+  .nav-bar ul li {
+    margin: 0 20px 0 0px;
+    font-size: 0.95rem;
   }
 
   header img,
   footer img {
     width: 117px;
     height: auto;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 
   section {
@@ -386,9 +430,14 @@ footer i {}
     padding: 0;
   }
 
+  .bg-quotes {
+    margin-top: 10%;
+    margin-bottom: -28%;
+  }
+
   .testimonial-item {
     margin-left: 0;
-    margin-top: 3.5rem;
+    margin-top: 2.7rem;
     width: 80%;
   }
 
@@ -415,7 +464,7 @@ footer i {}
   }
 
   .contact-info {
-    padding: var(--padding-footer-tablet);
+    padding: 25rem 1rem 0rem 2.2rem;
     grid-template-columns: 100%;
     grid-template-rows: repeat(6, auto);
     grid-template-areas: "logo""location""contacts""links""social"" attribution";
@@ -452,6 +501,10 @@ footer i {}
   .cta-item {
     min-width: 50%;
     max-width: 70%;
+  }
+
+  .cta {
+    margin-bottom: 10%;
   }
 
   .contact-info {
